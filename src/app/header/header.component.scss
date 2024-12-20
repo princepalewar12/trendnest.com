@@ -1,0 +1,23 @@
+.logo {
+  margin-right: 100px;
+}
+.button {
+  background-color: #d1ff97;
+  font-weight: 400;
+  cursor: pointer;
+}
+input {
+  all: unset;
+  border-radius: 100px;
+  width: 500px;
+  background-color: #e6e6e6;
+  padding: 10px 16px 10px 50px;
+  font-size: 18px;
+}
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 22%;
+  font-size: larger;
+  cursor: pointer;
+}
