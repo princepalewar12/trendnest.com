@@ -1,12 +1,49 @@
-main{
-    background-image: url('../../utils/images/login-backgroundImage.jpg');
-    height: 100vh;
-    padding: 0px;
+main {
+  background-image: url("../../utils/images/login-backgroundImage.jpg");
+  height: 100vh;
+  padding: 0px;
 }
-.hero{
-    background-image: linear-gradient(#d1ff97 2%, #e6e6e6 90%);
-    box-shadow: 1px 1px 3px 3px #b4b4b4;
+.hero {
+  background-image: linear-gradient(#d1ff97 2%, #ffffff 90%);
+  box-shadow: 1px 1px 3px 3px #b4b4b4;
 }
-.login-logo{
+.login-logo {
+  box-shadow: 1px 1px 2px 2px #b4b4b4;
+  border-radius: 15px;
+}
+input {
+  all: unset;
+  border-radius: 10px;
+  width: 60%;
+  font-size: larger;
+  background-color: rgba(236, 234, 234, 0.706);
+  padding: 5px 45px;
+  margin-bottom: 50px;
+}
+.button {
+  width: 78%;
+  cursor: pointer;
+  padding: 0px 25px;
+}
 
+.icon {
+  color: #a5a3a3;
+  left: 14%;
+}
+.line-container {
+  display: flex;
+  align-items: center;
+  width: 80%; /* Adjust width as needed */
+}
+
+.line {
+  flex-grow: 2;
+  border: none;
+  border-top: 2px dotted #000; /* Change color and thickness as needed */
+  margin: 0 10px; /* Space between line and text */
+  background: linear-gradient(to right, black 10%, transparent 25%) repeat-x; /* Adjust the percentages for spacing */
+}
+
+.line-text {
+  white-space: nowrap; /* Prevent text from wrapping */
 }
