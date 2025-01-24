@@ -1,3 +1,4 @@
+
 main {
   background-image: url("../../assets/images/login-backgroundImage.jpg");
   height: 100vh;
@@ -18,22 +19,30 @@ main {
 input {
   all: unset;
   border-radius: 10px;
-  width: 60%;
-  font-size: larger;
+  width: 100%;
+  font-size: 1rem;
   background-color: rgba(236, 234, 234, 0.706);
-  padding: 5px 45px;
+  padding: 5px 15px 5px 35px;
   margin-bottom: 50px;
+}
+#email, #password {
+  width: 125%
 }
 
 .button {
-  width: 78%;
+  width: 125%;
   cursor: pointer;
   padding: 0px 25px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 45px;
+
 }
 
 .icon {
+
   color: #a5a3a3;
-  left: 14%;
+  left: 5%;
 }
 
 .line-container {
@@ -68,8 +77,35 @@ input {
   cursor: pointer;
   box-shadow: 1px 2px 3px 0px #b4b4b4;
 }
+.cursor:hover {
+  border: 2px solid     black;
+}
 
 .password-hide {
   bottom: 30px;
-  right: 50px;
+  right: 10px;
+}
+
+.button:hover {
+  border: 2px solid #000000;
+  box-shadow: 1px 2px 3px 0px #b4b4b4;
+  background-color: #a3dd27;
+  color: rgb(0, 0, 0);
+}
+.button:focus{
+  border: 2px solid #000000;
+  box-shadow: 1px 2px 3px 0px #b4b4b4;
+  background-color: #a3dd27;
+  color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 430px) {
+  .button {
+    background-color: red;
+  }
+
+  .hero {
+    width: 86% !important;
+
+  }
 }

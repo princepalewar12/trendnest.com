@@ -1,7 +1,7 @@
 <main class="d-flex justify-content-center align-items-center">
-    <div class=" hero d-flex flex-column align-items-center h-auto w-auto rounded-5 ">
- 
- 
+    <div class=" hero d-flex flex-column align-items-center h-auto w-auto rounded-5">
+
+
         <svg class="login-logo my-5" width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" version="1.1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
@@ -22,38 +22,44 @@
             </g>
         </svg>
         <h1 class="mb-4">Sign in with email</h1>
-        <div class="position-relative w-100 d-flex align-items-center justify-content-center">
-            <input class=" mb-4" type="email">
-            <i class="icon position-absolute bottom-50 bi bi-envelope-fill"></i>
-        </div>
-        <div class="position-relative w-100 d-flex align-items-center justify-content-center">
-            <input class=" mb-4" [type]="fieldTextType ? 'text' : 'password'">
-            <i class="icon position-absolute bottom-50 bi bi-lock-fill"></i>
-            <span (click)="toggleFieldTextType()">
- 
-                <i class="bi password-hide position-absolute" [ngClass]="{
-                'bi-eye-slash': !fieldTextType,
-                'bi-eye': fieldTextType
-              }"></i>
-            </span>
-        </div>
-        <span class="button my-3 py-1 bg-black text-white fs-4 rounded-3 text-center">Get started</span>
+        <form class="" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          <div class="d-flex align-items-center justify-content-center flex-column">
+            <div id="email" class="position-relative d-flex align-items-center justify-content-center">
+                <input class="  mb-4" type="email" tabindex="1" formControlName="email">
+                <i class="icon position-absolute bottom-50 bi bi-envelope-fill"></i>
+            </div>
+            <div id="password" class="position-relative d-flex align-items-center justify-content-center">
+                <input class=" mb-4" [type]="fieldTextType ? 'text' : 'password'" tabindex="2"
+                    formControlName="password">
+                <i class="icon position-absolute bottom-50 bi bi-lock-fill"></i>
+                <span (click)="toggleFieldTextType()">
+
+                    <i class="bi password-hide position-absolute" [ngClass]="{
+            'bi-eye-slash': !fieldTextType,
+            'bi-eye': fieldTextType
+          }"></i>
+                </span>
+            </div>
+            <button class="button my-3 py-1 fs-4 ml-3 rounded-3 text-center" type="submit"  tabindex="3">Get started</button>
+          </div>
+        </form>
         <div class="line-container mt-2">
             <hr class="line">
             <span class="line-text">or sign in with</span>
             <hr class="line">
         </div>
         <div class="d-flex align-items-center justify-content-center my-4 w-50">
-            <div
-                class="cursor me-3 rounded border border-1 px-5 py-2 w-50  d-flex align-items-center justify-content-center">
+            <div class="cursor me-3 rounded border border-1 px-5 py-2 w-50  d-flex align-items-center justify-content-center"
+                tabindex="4">
                 <img class="link-icon" src="../../assets/images/icons/google-icon.png" alt="">
             </div>
-            <div
-                class="cursor me-3 rounded border border-1 px-5 py-2 w-50 d-flex align-items-center justify-content-center">
+            <div class="cursor me-3 rounded border border-1 px-5 py-2 w-50 d-flex align-items-center justify-content-center"
+                tabindex="5">
                 <img class="link-icon" src="../../assets/images/icons/facebook-icon.png" alt="">
- 
+
             </div>
-            <div class="cursor rounded border border-1 px-5 py-2 w-50 d-flex align-items-center justify-content-center">
+            <div class="cursor rounded border border-1 px-5 py-2 w-50 d-flex align-items-center justify-content-center"
+                tabindex="6">
                 <img class="link-icon" src="../../assets/images/icons/apple-icon.png" alt="">
             </div>
         </div>
